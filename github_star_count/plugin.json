@@ -1,0 +1,19 @@
+{
+  "tesserae_compat": "1.x",
+  "name": "GitHub, Star Count",
+  "version": "0.1.0",
+  "kind": "widget",
+  "description": "Hero number: total stars across every public repo the user owns. Adds a 30-day cumulative sparkline that fills in as the widget renders over time (each fetch snapshots the day's total so the chart accumulates a real history rather than depending on per-stargazer pagination). Shows the top three star-earning repos below the headline. Token required (uses GitHub's GraphQL API).",
+  "icon": "ph-star",
+  "supports": { "sizes": ["xs", "sm", "md", "lg"] },
+  "cell_options": [
+    {
+      "name": "user",
+      "type": "string",
+      "label": "GitHub username (blank uses the default from GitHub Core)",
+      "default": ""
+    }
+  ],
+  "render": { "dither": "none", "needs_network": true },
+  "requires": ["network:api.github.com"]
+}

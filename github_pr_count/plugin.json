@@ -1,0 +1,27 @@
+{
+  "tesserae_compat": "1.x",
+  "name": "GitHub, PR Count",
+  "version": "0.1.0",
+  "kind": "widget",
+  "description": "Hero number: total open PRs across your authored set plus PRs awaiting your review. Splits the count into a primary tile (everything that needs attention) and two sub-counts (yours / review-requested). Background colour shifts amber when any PR has been open more than seven days. Token required (search API needs auth).",
+  "icon": "ph-git-pull-request",
+  "supports": { "sizes": ["xs", "sm", "md", "lg"] },
+  "cell_options": [
+    {
+      "name": "user",
+      "type": "string",
+      "label": "GitHub username (blank uses the default from GitHub Core)",
+      "default": ""
+    },
+    {
+      "name": "stale_days",
+      "type": "number",
+      "label": "Stale threshold (days)",
+      "default": 7,
+      "min": 1,
+      "max": 90
+    }
+  ],
+  "render": { "dither": "none", "needs_network": true },
+  "requires": ["network:api.github.com"]
+}

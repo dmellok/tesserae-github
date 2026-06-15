@@ -1,0 +1,19 @@
+{
+  "tesserae_compat": "1.x",
+  "name": "GitHub, Commit Cadence",
+  "version": "0.1.0",
+  "kind": "widget",
+  "description": "Daily commit bars for the last 30 days on a single repo. Headline is the weekly average across the window, with totals for the last 7 and 30 days called out below. Pulls the stats/commit_activity endpoint (52 weeks × 7 days); the widget self-heals while GitHub is still computing the stats. Public repos work without a token.",
+  "icon": "ph-chart-bar",
+  "supports": { "sizes": ["sm", "md", "lg"] },
+  "cell_options": [
+    {
+      "name": "repo",
+      "type": "string",
+      "label": "owner/repo",
+      "default": "dmellok/tesserae"
+    }
+  ],
+  "render": { "dither": "none", "needs_network": true },
+  "requires": ["network:api.github.com"]
+}
