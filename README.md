@@ -22,4 +22,4 @@ Developer-focused widgets that need a personal access token. The typical Tessera
 
 ## License
 
-MIT. See [LICENSE](./LICENSE).
+AGPL-3.0-or-later. See [LICENSE](./LICENSE).
